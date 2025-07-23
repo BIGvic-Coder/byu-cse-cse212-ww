@@ -1,6 +1,5 @@
-
 <Project Sdk="Microsoft.NET.Sdk">
-   <PropertyGroup>
+  <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
@@ -15,4 +14,10 @@
     <PackageReference Include="MSTest.TestFramework" Version="3.0.4" />
   </ItemGroup>
 
+  <!-- 👇 This ensures census.txt is copied to the output directory -->
+  <ItemGroup>
+    <None Update="census.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
